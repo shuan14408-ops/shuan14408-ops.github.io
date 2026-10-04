@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>教育科技作品集</title>
-<meta name="description" content="六個可以直接在瀏覽器試玩的教學網站：程式設計、實體運算、融合教育、國際教育與學生共創。">
+<meta name="description" content="七個可以直接在瀏覽器使用的教學網站：程式設計、實體運算、融合教育、國際教育、學生共創與資優教育教師工具。">
 <meta property="og:title" content="教育科技作品集">
-<meta property="og:description" content="六個可以直接在瀏覽器試玩的教學網站：程式設計、實體運算、融合教育、國際教育與學生共創。">
+<meta property="og:description" content="七個可以直接在瀏覽器使用的教學網站：程式設計、實體運算、融合教育、國際教育、學生共創與資優教育教師工具。">
 <meta property="og:image" content="https://shuan14408-ops.github.io/images/body-school-day.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e8573f'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3E%E6%95%99%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,21 +16,21 @@
 :root{
   --bg:#f7f4ee;--surface:#fffdf9;--ink:#1f2328;--ink-2:#565d66;--line:#e6dfd3;
   --accent:#e8573f;--accent-ink:#fff;--chip:#f1ebe0;
-  --t1:#5b4bd6;--t2:#0e8a73;--t3:#c2731a;
+  --t1:#5b4bd6;--t2:#0e8a73;--t3:#c2731a;--t4:#2463b8;
   --shadow:0 1px 2px rgba(40,30,10,.06),0 8px 24px rgba(40,30,10,.07);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#15171b;--surface:#1d2026;--ink:#ecebe7;--ink-2:#a5abb4;--line:#2e323a;
     --accent:#ff7a61;--accent-ink:#1a0f0b;--chip:#272b33;
-    --t1:#9d92ff;--t2:#3fd0b0;--t3:#f0a54d;
+    --t1:#9d92ff;--t2:#3fd0b0;--t3:#f0a54d;--t4:#7fb2ff;
     --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
   }
 }
 :root[data-theme="dark"]{
   --bg:#15171b;--surface:#1d2026;--ink:#ecebe7;--ink-2:#a5abb4;--line:#2e323a;
   --accent:#ff7a61;--accent-ink:#1a0f0b;--chip:#272b33;
-  --t1:#9d92ff;--t2:#3fd0b0;--t3:#f0a54d;
+  --t1:#9d92ff;--t2:#3fd0b0;--t3:#f0a54d;--t4:#7fb2ff;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
 }
 *{box-sizing:border-box}
@@ -114,6 +114,7 @@ footer a{color:var(--ink)}
       <a href="#coding">程式與運算思維</a>
       <a href="#inclusion">融合教育</a>
       <a href="#games">遊戲化學習</a>
+      <a href="#teacher">教師工具</a>
       <a href="#about">關於</a>
     </div>
   </div>
@@ -123,10 +124,10 @@ footer a{color:var(--ink)}
   <header class="hero">
     <span class="kicker">TEACHING WITH TECHNOLOGY</span>
     <h1>把課堂上的想法，<br>做成<em>學生能動手玩</em>的網站。</h1>
-    <p class="lead">這裡收錄六個教學網站，涵蓋程式設計、實體運算、融合教育、國際教育與學生共創。每個作品都能直接在瀏覽器開啟試玩，不需安裝，原始碼也全部公開在 GitHub。</p>
+    <p class="lead">這裡收錄七個教學網站，涵蓋程式設計、實體運算、融合教育、國際教育、學生共創，以及資優教育的教師工具。每個作品都能直接在瀏覽器開啟使用，不需安裝，原始碼也全部公開在 GitHub。</p>
     <ul class="stats">
-      <li><b>6</b><span>個教學網站</span></li>
-      <li><b>3</b><span>個教學主題</span></li>
+      <li><b>7</b><span>個教學網站</span></li>
+      <li><b>4</b><span>個教學主題</span></li>
       <li><b>0</b><span>安裝步驟，點開就能玩</span></li>
     </ul>
   </header>
@@ -233,10 +234,32 @@ footer a{color:var(--ink)}
     </div>
   </section>
 
+  <section class="theme" id="teacher" style="--c:var(--t4)">
+    <div class="theme-head">
+      <span class="no">04</span>
+      <h2>資優教育教師工具</h2>
+      <p>把最耗時的文書工作交給工具，讓老師把時間留給學生。</p>
+    </div>
+    <div class="grid single">
+      <article class="card">
+        <a class="shot" href="https://shuan14408-ops.github.io/igp/" target="_blank" rel="noopener"><img src="images/igp.webp" alt="線上 IGP 生成工具畫面：選擇學習領域與年級，貼上課程內容後智慧比對領綱" loading="lazy" width="1440" height="900"></a>
+        <div class="body">
+          <h3>線上 IGP 生成工具<small>資優特需領綱智慧對應</small></h3>
+          <p>貼上課程內容，自動在對應的學習階段中比對資優特需領綱，建議學習表現與學習內容，並一鍵產生 IGP Word 檔。領綱條目原文照錄，避免錯字；全程在瀏覽器本機執行，學生資料不上傳。</p>
+          <ul class="tags"><li>資優教育</li><li>IGP</li><li>課程綱要</li><li>Word 自動產生</li><li>隱私優先</li></ul>
+          <div class="actions">
+            <a class="btn primary" href="https://shuan14408-ops.github.io/igp/" target="_blank" rel="noopener">立即使用 →</a>
+            <a class="btn" href="https://github.com/shuan14408-ops/igp" target="_blank" rel="noopener">原始碼</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="about" id="about">
     <div>
       <h2>關於這些作品</h2>
-      <p>每個網站都從一個教學問題出發：學生怎麼更快理解抽象概念、怎麼體會別人的處境、怎麼從參與者變成創作者。</p>
+      <p>每個網站都從一個教學問題出發：學生怎麼更快理解抽象概念、怎麼體會別人的處境、怎麼從參與者變成創作者，以及老師怎麼把時間留給學生。</p>
       <p>開發時運用 AI 程式工具協助撰寫程式，再依實際操作與試玩結果反覆調整介面、難度與回饋方式。</p>
     </div>
     <div>
