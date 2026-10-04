@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>教育科技作品集</title>
+<meta name="description" content="六個可以直接在瀏覽器試玩的教學網站：程式設計、實體運算、融合教育、國際教育與學生共創。">
+<meta property="og:title" content="教育科技作品集">
+<meta property="og:description" content="六個可以直接在瀏覽器試玩的教學網站：程式設計、實體運算、融合教育、國際教育與學生共創。">
+<meta property="og:image" content="https://shuan14408-ops.github.io/images/body-school-day.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e8573f'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3E%E6%95%99%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f4ee;--surface:#fffdf9;--ink:#1f2328;--ink-2:#565d66;--line:#e6dfd3;
+  --accent:#e8573f;--accent-ink:#fff;--chip:#f1ebe0;
+  --t1:#5b4bd6;--t2:#0e8a73;--t3:#c2731a;
+  --shadow:0 1px 2px rgba(40,30,10,.06),0 8px 24px rgba(40,30,10,.07);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171b;--surface:#1d2026;--ink:#ecebe7;--ink-2:#a5abb4;--line:#2e323a;
+    --accent:#ff7a61;--accent-ink:#1a0f0b;--chip:#272b33;
+    --t1:#9d92ff;--t2:#3fd0b0;--t3:#f0a54d;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171b;--surface:#1d2026;--ink:#ecebe7;--ink-2:#a5abb4;--line:#2e323a;
+  --accent:#ff7a61;--accent-ink:#1a0f0b;--chip:#272b33;
+  --t1:#9d92ff;--t2:#3fd0b0;--t3:#f0a54d;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-weight:900;letter-spacing:.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand i{width:28px;height:28px;border-radius:8px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-style:normal;font-size:14px}
+.links{display:flex;gap:4px;font-size:14px}
+.links a{text-decoration:none;color:var(--ink-2);padding:6px 10px;border-radius:8px}
+.links a:hover{background:var(--chip);color:var(--ink)}
+header.hero{padding:72px 0 40px}
+.kicker{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.12em;margin-bottom:14px}
+h1{font-size:clamp(34px,5.4vw,58px);line-height:1.18;margin:0 0 20px;font-weight:900;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:clamp(16px,1.9vw,19px);color:var(--ink-2);max-width:680px;margin:0 0 32px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 18px;box-shadow:var(--shadow);min-width:150px}
+.stats b{display:block;font-size:26px;line-height:1.2;font-weight:900}
+.stats span{font-size:13px;color:var(--ink-2)}
+section.theme{padding:40px 0 16px}
+.theme-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.theme-head .no{font-size:13px;font-weight:900;color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:2px 10px;letter-spacing:.08em}
+.theme-head h2{margin:0;font-size:clamp(22px,2.8vw,28px);font-weight:900}
+.theme-head p{margin:0;color:var(--ink-2);font-size:15px;flex-basis:100%}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.grid.single{grid-template-columns:minmax(0,1fr)}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid.three .body h3{font-size:19px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(40,30,10,.06),0 16px 36px rgba(40,30,10,.12)}
+.shot{display:block;aspect-ratio:16/10;overflow:hidden;background:var(--chip);border-bottom:1px solid var(--line)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .4s ease}
+.card:hover .shot img{transform:scale(1.025)}
+.grid.single .card{flex-direction:row}
+.grid.single .shot{flex:0 0 58%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--line)}
+.body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.body h3{margin:0;font-size:21px;font-weight:900;line-height:1.35}
+.body h3 small{display:block;font-size:13px;font-weight:500;color:var(--ink-2);letter-spacing:.02em}
+.body p{margin:0;color:var(--ink-2);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 0;padding:0;list-style:none}
+.tags li{font-size:12.5px;background:var(--chip);border-radius:999px;padding:2px 10px;color:var(--ink-2)}
+.actions{display:flex;gap:8px;margin-top:auto;padding-top:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:700;font-size:14px;border-radius:10px;padding:9px 16px;border:1.5px solid var(--line);background:transparent;transition:background .15s,border-color .15s}
+.btn:hover{border-color:var(--ink-2)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.06)}
+.btn svg{width:16px;height:16px}
+.about{margin:56px 0 0;padding:36px;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.about h2{margin:0 0 10px;font-size:24px;font-weight:900}
+.about p{margin:0 0 10px;color:var(--ink-2)}
+.about ul{margin:0;padding-left:20px;color:var(--ink-2)}
+.about li{margin:4px 0}
+footer{padding:40px 0 56px;color:var(--ink-2);font-size:14px;text-align:center}
+footer a{color:var(--ink)}
+@media (max-width:1020px){.grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){
+  .grid.three{grid-template-columns:minmax(0,1fr)}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .grid.single .card{flex-direction:column}
+  .grid.single .shot{flex:none;aspect-ratio:16/10;border-right:0;border-bottom:1px solid var(--line)}
+  .about{grid-template-columns:1fr;padding:24px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .links{display:none}
+  header.hero{padding:44px 0 24px}
+  .stats li{min-width:0;flex:1 1 40%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><i>教</i>教育科技作品集</a>
+    <div class="links">
+      <a href="#coding">程式與運算思維</a>
+      <a href="#inclusion">融合教育</a>
+      <a href="#games">遊戲化學習</a>
+      <a href="#about">關於</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="hero">
+    <span class="kicker">TEACHING WITH TECHNOLOGY</span>
+    <h1>把課堂上的想法，<br>做成<em>學生能動手玩</em>的網站。</h1>
+    <p class="lead">這裡收錄六個教學網站，涵蓋程式設計、實體運算、融合教育、國際教育與學生共創。每個作品都能直接在瀏覽器開啟試玩，不需安裝，原始碼也全部公開在 GitHub。</p>
+    <ul class="stats">
+      <li><b>6</b><span>個教學網站</span></li>
+      <li><b>3</b><span>個教學主題</span></li>
+      <li><b>0</b><span>安裝步驟，點開就能玩</span></li>
+    </ul>
+  </header>
+
+  <section class="theme" id="coding" style="--c:var(--t1)">
+    <div class="theme-head">
+      <span class="no">01</span>
+      <h2>程式設計與運算思維</h2>
+      <p>從積木到程式碼、從螢幕到實體裝置，讓學生看得到、摸得到程式的結果。</p>
+    </div>
+    <div class="grid three">
+      <article class="card">
+        <a class="shot" href="https://shuan14408-ops.github.io/sparkcode-lab/" target="_blank" rel="noopener"><img src="images/sparkcode-lab.webp" alt="創星程式基地畫面：左側為 Blockly 積木工作區，右側為今日任務與 SmartRing 模擬器" loading="lazy" width="1440" height="900"></a>
+        <div class="body">
+          <h3>創星程式基地<small>SparkCode Lab</small></h3>
+          <p>用 Blockly 積木控制 12 顆 LED 的 SmartRing 燈環。積木與 JavaScript 同步對照，搭配課程代碼、任務提示與系統評分；沒有硬體也能用模擬器練習。</p>
+          <ul class="tags"><li>Blockly</li><li>Web Serial</li><li>實體運算</li><li>任務導向學習</li></ul>
+          <div class="actions">
+            <a class="btn primary" href="https://shuan14408-ops.github.io/sparkcode-lab/" target="_blank" rel="noopener">立即體驗 →</a>
+            <a class="btn" href="https://github.com/shuan14408-ops/sparkcode-lab" target="_blank" rel="noopener">原始碼</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="https://shuan14408-ops.github.io/oled-classroom/" target="_blank" rel="noopener"><img src="images/oled-classroom.webp" alt="OLED 設計教室畫面：32×32 像素畫布上畫了一顆愛心，右側即時預覽 OLED 螢幕" loading="lazy" width="1440" height="900"></a>
+        <div class="body">
+          <h3>OLED 設計教室<small>Pixel by Pixel</small></h3>
+          <p>在瀏覽器上逐格點亮像素，即時預覽 128 × 64 OLED 效果，一鍵匯出 Arduino 程式碼。中文字自動轉成點陣，還能產生 AI 提示詞，引導學生延伸程式。</p>
+          <ul class="tags"><li>Arduino</li><li>SSD1306</li><li>像素與座標</li><li>AI 協作</li></ul>
+          <div class="actions">
+            <a class="btn primary" href="https://shuan14408-ops.github.io/oled-classroom/" target="_blank" rel="noopener">立即體驗 →</a>
+            <a class="btn" href="https://github.com/shuan14408-ops/oled-classroom" target="_blank" rel="noopener">原始碼</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="https://shuan14408-ops.github.io/dino-tuning-lab/" target="_blank" rel="noopener"><img src="images/dino-tuning-lab.webp" alt="飛翔小鳥參數實驗室畫面：左側試飛遊戲，右側為拍翅力度與重力滑桿" loading="lazy" width="1440" height="900"></a>
+        <div class="body">
+          <h3>飛翔小鳥參數實驗室<small>Flap Tuning Lab</small></h3>
+          <p>調整拍翅力度、重力、速度與管道間距，立刻試飛。學生從玩家變成遊戲設計者，用數據對照手感，再和經典參數比較相似度。</p>
+          <ul class="tags"><li>參數與變數</li><li>遊戲設計</li><li>Next.js</li></ul>
+          <div class="actions">
+            <a class="btn primary" href="https://shuan14408-ops.github.io/dino-tuning-lab/" target="_blank" rel="noopener">立即體驗 →</a>
+            <a class="btn" href="https://github.com/shuan14408-ops/dino-tuning-lab" target="_blank" rel="noopener">原始碼</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="theme" id="inclusion" style="--c:var(--t2)">
+    <div class="theme-head">
+      <span class="no">02</span>
+      <h2>融合教育與同理心</h2>
+      <p>用親身操作取代說教，讓學生發現：卡住的往往是環境，而不是人。</p>
+    </div>
+    <div class="grid single">
+      <article class="card">
+        <a class="shot" href="https://shuan14408-ops.github.io/body-school-day/" target="_blank" rel="noopener"><img src="images/body-school-day.webp" alt="換一個身體上一天課首頁：今天上學，換你闖關，四張關卡卡片" loading="lazy" width="1440" height="900"></a>
+        <div class="body">
+          <h3>換一個身體上一天課<small>校園任務大冒險</small></h3>
+          <p>跟著四位同學度過一天：操作輪椅通過狹窄走廊、在反光中核對物品、只靠手勢與燈號打球、在被打斷的午餐任務中切換步驟。每關都有輔助工具，最後集齊四枚徽章，回顧通用設計的四種方法。</p>
+          <ul class="tags"><li>融合教育</li><li>通用設計</li><li>情境模擬</li><li>社會情緒學習</li></ul>
+          <div class="actions">
+            <a class="btn primary" href="https://shuan14408-ops.github.io/body-school-day/" target="_blank" rel="noopener">立即體驗 →</a>
+            <a class="btn" href="https://github.com/shuan14408-ops/body-school-day" target="_blank" rel="noopener">原始碼</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="theme" id="games" style="--c:var(--t3)">
+    <div class="theme-head">
+      <span class="no">03</span>
+      <h2>遊戲化學習與學生共創</h2>
+      <p>把課堂變成冒險，讓學生從參與者變成創作者。</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <a class="shot" href="https://shuan14408-ops.github.io/115puzzle/" target="_blank" rel="noopener"><img src="images/115puzzle.webp" alt="校影九重咒首頁：黑底金字標題，九道關卡，一段救贖之旅" loading="lazy" width="1440" height="900"></a>
+        <div class="body">
+          <h3>校影九重咒<small>校園實境解謎</small></h3>
+          <p>由五年級學生共同創作的文字解謎冒險。九位學生各自設計一關，並繪製劇情畫面；玩家走過校園九個場景，搭配紙本解謎包找出答案。</p>
+          <ul class="tags"><li>學生共創</li><li>實境解謎</li><li>故事設計</li><li>校園探索</li></ul>
+          <div class="actions">
+            <a class="btn primary" href="https://shuan14408-ops.github.io/115puzzle/" target="_blank" rel="noopener">立即體驗 →</a>
+            <a class="btn" href="https://github.com/shuan14408-ops/115puzzle" target="_blank" rel="noopener">原始碼</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="https://shuan14408-ops.github.io/internationalstore/" target="_blank" rel="noopener"><img src="images/internationalstore.webp" alt="國度商店首頁：環遊世界文化大挑戰，教師模式與學生模式兩個入口" loading="lazy" width="1440" height="900"></a>
+        <div class="body">
+          <h3>國度商店<small>環遊世界文化大挑戰</small></h3>
+          <p>教師建立遊戲房間並列印 QR Code，學生分組掃碼闖關，回答亞洲、歐洲、非洲、美洲與大洋洲的文化題目，每題附上小故事解說，即時排行榜帶動全班氣氛。</p>
+          <ul class="tags"><li>國際教育</li><li>分組合作</li><li>QR Code 闖關</li><li>即時排行榜</li></ul>
+          <div class="actions">
+            <a class="btn primary" href="https://shuan14408-ops.github.io/internationalstore/" target="_blank" rel="noopener">立即體驗 →</a>
+            <a class="btn" href="https://github.com/shuan14408-ops/internationalstore" target="_blank" rel="noopener">原始碼</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div>
+      <h2>關於這些作品</h2>
+      <p>每個網站都從一個教學問題出發：學生怎麼更快理解抽象概念、怎麼體會別人的處境、怎麼從參與者變成創作者。</p>
+      <p>開發時運用 AI 程式工具協助撰寫程式，再依實際操作與試玩結果反覆調整介面、難度與回饋方式。</p>
+    </div>
+    <div>
+      <h2>共同的設計原則</h2>
+      <ul>
+        <li>點開就能用：免安裝、免註冊，平板與電腦都能操作</li>
+        <li>立即回饋：每個操作都看得到結果</li>
+        <li>失敗也沒關係：保留進度、提供提示與輔助工具</li>
+        <li>資料留在學生裝置上，不蒐集個人資料</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    原始碼都公開在 <a href="https://github.com/shuan14408-ops" target="_blank" rel="noopener">github.com/shuan14408-ops</a>
+  </div>
+</footer>
+</body>
+</html>
